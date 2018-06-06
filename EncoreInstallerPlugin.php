@@ -8,9 +8,9 @@ use Composer\Plugin\PluginInterface;
 
 class EncoreInstallerPlugin implements PluginInterface
 {
-	public function activate(Composer $composer, IOInterface $io)
-  {
-		$installer = new EncoreInstaller($io, $composer);
-		$composer->getInstallationManager()->addInstaller($installer);
-	}
+    public function activate(Composer $composer, IOInterface $io)
+    {
+        $installer = new EncoreInstaller($io, $composer);
+        $composer->getInstallationManager()->addInstaller($installer);
+    }
 }

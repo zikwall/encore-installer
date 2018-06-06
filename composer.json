@@ -1,0 +1,26 @@
+{
+	"name": "zikwall/encore-installers",
+	"type": "composer-plugin",
+	"license": "MIT",
+  "keywords": ["yii2", "encore", "composer", "plugin", "zikwall"],
+	"support": {
+		"issues": "https://github.com/zikwall/encore-installer/issues",
+    "source": "https://github.com/zikwall/encore-installer"
+	},
+  "authors": [
+    {
+      "name": "Andrey Kapitonov",
+      "email": "andrey.kapitonov.96@gmall.com"
+    }
+  ],
+	"autoload": {
+		"psr-4": {"zikwall\\EncoreInstaller\\": ""}
+	},
+	"extra": {
+		"class": "zikwall\\EncoreInstaller\\EncoreInstallerPlugin"
+	},
+	"require": {
+		"composer-plugin-api": "^1.0",
+		"composer/installers": "^1.0"
+	}
+}

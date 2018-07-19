@@ -27,7 +27,10 @@
 		]
 	},
 	"extra": {
-		"class": "zikwall\\EncoreInstaller\\EncoreInstallerPlugin"
+		"class": "zikwall\\EncoreInstaller\\EncoreInstallerPlugin",
+		"encore-composer-mkdir": [
+			"vendor/zikwall/en-core/modules"
+		]
 	},
 	"require": {
 		"composer-plugin-api": "^1.0",

@@ -14,7 +14,17 @@
 		}
 	],
 	"autoload": {
-		"psr-4": {"zikwall\\EncoreInstaller\\": ""}
+		"psr-4": {
+			"zikwall\\EncoreInstaller\\": ""
+		}
+	},
+	"scripts": {
+		"post-install-cmd": [
+			"zikwall\\EncoreInstaller\\ScriptHandlerHelper::mkdirs"
+		],
+		"post-update-cmd": [
+			"zikwall\\EncoreInstaller\\ScriptHandlerHelper::mkdirs"
+		]
 	},
 	"extra": {
 		"class": "zikwall\\EncoreInstaller\\EncoreInstallerPlugin"

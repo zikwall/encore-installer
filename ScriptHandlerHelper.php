@@ -35,6 +35,7 @@ class ScriptHandlerHelper
         $legacy = array_filter($extras['encore-composer-mkdir'], function ($directory) {
             return !is_string($directory);
         });
+
         if (!empty($legacy)) {
             $message = 'Since 2.0, mode is no longer supported. See UPGRADE-2.0.md for further details.';
             throw new InvalidArgumentException($message);

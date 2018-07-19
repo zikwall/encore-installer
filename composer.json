@@ -19,6 +19,9 @@
 		}
 	},
 	"scripts": {
+		"post-package-install": [
+			"php -r \"print 'run method'\""
+		],
 		"post-install-cmd": [
 			"zikwall\\EncoreInstaller\\ScriptHandlerHelper::mkdirs"
 		],

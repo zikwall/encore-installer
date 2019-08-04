@@ -8,8 +8,8 @@ use InvalidArgumentException;
 /**
  * <code>
  * "extra": {
- * "encore-composer-mkdir": [
- *  "vendor/zikwall/en-core/modules",
+ * "easy-online-composer-mkdir": [
+ *  "vendor/zikwall/easy-online/modules",
  *  "folder2/folde22"
  *  ]
  * }
@@ -22,17 +22,17 @@ class ScriptHandlerHelper
     {
         $extras = $event->getComposer()->getPackage()->getExtra();
 
-        if (! isset($extras['encore-composer-mkdir'])) {
+        if (! isset($extras['easy-online-composer-mkdir'])) {
             $message = 'The mkdir handler needs to be configured through the extra.encore-composer-mkdir setting.';
             throw new InvalidArgumentException($message);
         }
-        if (! is_array($extras['encore-composer-mkdir'])) {
+        if (! is_array($extras['easy-online-composer-mkdir'])) {
             $message = 'The extra.encore-composer-mkdir setting must be an array.';
             throw new InvalidArgumentException($message);
         }
 
         /* Since 2.0, mode is no longer supported */
-        $legacy = array_filter($extras['encore-composer-mkdir'], function ($directory) {
+        $legacy = array_filter($extras['easy-online-composer-mkdir'], function ($directory) {
             return !is_string($directory);
         });
 
@@ -42,7 +42,7 @@ class ScriptHandlerHelper
         }
 
         /* Remove existing directories from creation list */
-        $directories = array_filter($extras['encore-composer-mkdir'], function ($directory) {
+        $directories = array_filter($extras['easy-online-composer-mkdir'], function ($directory) {
             return !file_exists($directory);
         });
 

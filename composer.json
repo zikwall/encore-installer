@@ -2,7 +2,7 @@
 	"name": "zikwall/encore-installer",
 	"type": "composer-plugin",
 	"license": "MIT",
-	"keywords": ["yii2", "encore", "composer", "plugin"],
+	"keywords": ["yii2", "easy-online", "composer", "plugin"],
 	"support": {
 		"issues": "https://github.com/zikwall/encore-installer/issues",
 		"source": "https://github.com/zikwall/encore-installer"
@@ -32,7 +32,7 @@
 	"extra": {
 		"class": "zikwall\\EncoreInstaller\\EncoreInstallerPlugin",
 		"encore-composer-mkdir": [
-			"vendor/zikwall/en-core/modules"
+			"vendor/zikwall/easy-online/modules"
 		]
 	},
 	"require": {
